@@ -1,5 +1,7 @@
+import HomeBox from "../features/main/HomeBox";
+
 const Home: React.FC = () => {
-  return <div>Home</div>;
+  return <HomeBox />;
 };
 
 export default Home;
