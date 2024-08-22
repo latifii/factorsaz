@@ -1,10 +1,32 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" sx={{ top: 0, bgcolor: "primary.dark" }}>
       <Toolbar>
-        <Typography variant="h6">هدر سایت</Typography>
+        <Button component={Link} to="/" color="inherit">
+          <Typography variant="h6">لوگو</Typography>
+        </Button>
+        <Box>
+          <Button component={Link} to="/" color="inherit">
+            خانه
+          </Button>
+          <Button component={Link} to="about" color="inherit">
+            درباره ما
+          </Button>
+          <Button component={Link} to="sample" color="inherit">
+            نمونه فاکتور
+          </Button>
+        </Box>
+        <Button
+          component={Link}
+          to="login"
+          color="inherit"
+          sx={{ marginRight: "auto" }}
+        >
+          ورود
+        </Button>
       </Toolbar>
     </AppBar>
   );

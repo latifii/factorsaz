@@ -1,7 +1,13 @@
-import HomeBox from "../features/main/HomeBox";
+import HomeFeatures from "../features/main/HomeFeatures";
+import HomeHero from "../features/main/HomeHero";
 
 const Home: React.FC = () => {
-  return <HomeBox />;
+  return (
+    <>
+      <HomeHero />
+      <HomeFeatures />
+    </>
+  );
 };
 
 export default Home;
