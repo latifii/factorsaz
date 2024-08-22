@@ -62,6 +62,11 @@ const HomeHero: React.FC = () => {
             to="/signup"
             variant="contained"
             size="large"
+            sx={{
+              textAlign: "center",
+              display: "inline-block",
+              marginX: "auto",
+            }}
           >
             ثبت نام رایگان
           </Button>

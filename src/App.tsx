@@ -5,7 +5,8 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#1976d2",
-      dark: "#002d79", // (اختیاری) رنگ تیره‌تر
+      dark: "#002d79",
+      light: "#c0e0ff",
     },
   },
   typography: {

@@ -27,7 +27,7 @@ const features = [
 
 const HomeFeatures: React.FC = () => {
   return (
-    <Box sx={{ bgcolor: "rgba(34, 37, 48, 1)", py: "3rem" }}>
+    <Box>
       <Container>
         <Box
           display="flex"
@@ -45,8 +45,11 @@ const HomeFeatures: React.FC = () => {
                 flexDirection="column"
                 gap={1}
                 sx={{
-                  color: "white",
+                  bgcolor: "primary.light",
+                  borderRadius: "0.5rem",
                   flex: 1,
+                  py: "3rem",
+                  px: "1rem",
                 }}
               >
                 {feature.icon}
