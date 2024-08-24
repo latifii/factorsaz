@@ -9,6 +9,8 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import DehazeIcon from "@mui/icons-material/Dehaze";
+import Logo from "../ui/Logo";
+import imgLogo from "../../assets/images/logo.webp";
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +29,7 @@ const Header: React.FC = () => {
     <AppBar position="sticky" sx={{ top: 0, bgcolor: "primary.dark" }}>
       <Toolbar>
         <Button component={Link} to="/" color="inherit">
-          <Typography variant="h6">لوگو</Typography>
+          <Logo src={imgLogo} width={70} height={70} />
         </Button>
         <Box sx={{ display: { xs: "none", md: "block" } }}>
           <Button component={Link} to="/" color="inherit">

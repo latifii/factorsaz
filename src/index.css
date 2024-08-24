@@ -23,12 +23,7 @@
   font-weight: normal;
   src: url("/src/assets/fonts/iransans/IRANSansWeb.woff2");
 }
-@font-face {
-  font-family: "Iransans";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/src/assets/fonts/iransans/IRANSansWeb.woff2");
-}
+
 @font-face {
   font-family: "Iransans";
   font-style: normal;
