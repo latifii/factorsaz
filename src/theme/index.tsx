@@ -1,5 +1,4 @@
 import { ReactNode, useMemo } from "react";
-import PropTypes from "prop-types";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import {
@@ -38,7 +37,3 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     </MUIThemeProvider>
   );
 }
-
-ThemeProvider.propTypes = {
-  children: PropTypes.node,
-};

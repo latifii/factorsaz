@@ -1,16 +1,9 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Drawer,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, Drawer, Toolbar } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import Logo from "../ui/Logo";
-import imgLogo from "../../assets/images/logo.webp";
+import imgLogo from "../../assets/images/logo-trans.jpg";
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +21,12 @@ const Header: React.FC = () => {
   return (
     <AppBar position="sticky" sx={{ top: 0, bgcolor: "primary.dark" }}>
       <Toolbar>
-        <Button component={Link} to="/" color="inherit">
+        <Button
+          component={Link}
+          to="/"
+          color="inherit"
+          // sx={{ backgroundColor: "white" }}
+        >
           <Logo src={imgLogo} width={70} height={70} />
         </Button>
         <Box sx={{ display: { xs: "none", md: "block" } }}>

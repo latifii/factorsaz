@@ -1,14 +1,12 @@
 import { alpha, Theme } from "@mui/material/styles";
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 
-// گسترش تایپ Theme برای افزودن customShadows
 declare module "@mui/material/styles" {
   interface Theme {
     customShadows: {
       card: string;
     };
   }
-  // اجازه به theme برای داشتن customShadows
   interface ThemeOptions {
     customShadows?: {
       card?: string;
@@ -45,6 +43,7 @@ export function overrides(theme: Theme) {
           padding: 0,
           width: "100%",
           height: "100%",
+          // color: theme.palette.grey[800],
         },
         "#root": {
           width: "100%",
