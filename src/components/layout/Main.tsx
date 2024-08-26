@@ -20,7 +20,6 @@ const Main: React.FC<MainProps> = ({ sx, children }) => {
         minHeight: 1,
         display: "flex",
         flexDirection: "column",
-        bgcolor: "red",
         py: `${HEADER.H_MOBILE + SPACING}px`,
         ...(lgUp && {
           px: 2,

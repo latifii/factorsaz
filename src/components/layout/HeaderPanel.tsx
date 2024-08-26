@@ -1,10 +1,21 @@
-import { AppBar, Stack, styled, Toolbar, useTheme } from "@mui/material";
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Stack,
+  styled,
+  Toolbar,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useResponsive } from "../../hooks/use-responsive";
 import { HEADER, NAV } from "../../configs/config-layout";
 import { bgBlur } from "../../theme/css";
+import DehazeIcon from "@mui/icons-material/Dehaze";
 
 export type HeaderProps = {
-  onOpenNav?: (value: boolean) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onOpenNav?: (value: any) => void;
 };
 
 const HeaderPanel: React.FC<HeaderProps> = ({ onOpenNav }) => {
@@ -13,9 +24,23 @@ const HeaderPanel: React.FC<HeaderProps> = ({ onOpenNav }) => {
 
   const renderContent = (
     <>
-      <Stack direction="row" alignItems="center" spacing={1}>
-        <p>نوتیفت</p>
-        <p>کاربر</p>
+      {!lgUp && (
+        <IconButton onClick={onOpenNav} sx={{ mr: 1 }}>
+          <DehazeIcon />
+        </IconButton>
+      )}
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        width={1}
+        spacing={1}
+        sx={{ color: "text.primary" }}
+      >
+        <Typography variant="body2">{new Date().getDate()}</Typography>
+        <Button color="primary" variant="contained">
+          خروج
+        </Button>
       </Stack>
     </>
   );
@@ -24,6 +49,7 @@ const HeaderPanel: React.FC<HeaderProps> = ({ onOpenNav }) => {
     <AppBar
       sx={{
         boxShadow: "none",
+        borderBottom: `1px solid ${theme.palette.divider}`,
         height: HEADER.H_MOBILE,
         zIndex: theme.zIndex.appBar + 1,
         left: 0,

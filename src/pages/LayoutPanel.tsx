@@ -3,11 +3,13 @@ import { Box } from "@mui/material";
 import NavPanel from "../components/layout/NavPanel";
 import Main from "../components/layout/Main";
 import HeaderPanel from "../components/layout/HeaderPanel";
+import { useState } from "react";
 
 const LayoutPanel: React.FC = () => {
+  const [openNav, setOpenNav] = useState(false);
   return (
     <>
-      <HeaderPanel />
+      <HeaderPanel onOpenNav={() => setOpenNav(true)} />
       <Box
         sx={{
           display: "flex",
@@ -15,7 +17,7 @@ const LayoutPanel: React.FC = () => {
           flexDirection: { xs: "column", lg: "row" },
         }}
       >
-        <NavPanel />
+        <NavPanel openNav={openNav} onCloseNav={() => setOpenNav(false)} />
         <Main>
           <Outlet />
         </Main>
